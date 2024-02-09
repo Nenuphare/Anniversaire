@@ -1,5 +1,11 @@
 import React from 'react';
 import { Grid } from "@mui/material";
+import Paper from '@mui/material/Paper';
+import Box from '@mui/material/Box';
+import { styled } from '@mui/material/styles';
+
+const Item = styled(Paper)(({ theme }) => ({
+}));
 
 const Citation = () => {
   const border = {
@@ -12,6 +18,7 @@ const Citation = () => {
   };
   const centeredGrid = {
     display: 'flex',
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     alignContent: 'center',
@@ -30,20 +37,20 @@ const Citation = () => {
     <div style={border}>
       <Grid container style={centeredGrid}>
         <Grid style={borderedGridStyle}>
-          <Grid item style={white_back}>
+          <Item style={white_back}>
             <p>There is a Japan legend that said ...
               <br />
               -Japanese Legend
             </p>
-          </Grid>
+          </Item>
         </Grid>
         <Grid style={borderedGridStyle}>
-          <Grid item style={white_back}>
+          <Item item style={white_back}>
             <p>There is a Japan legend that said ...
               <br />
               -Japanese Legend
             </p>
-          </Grid>
+          </Item>
         </Grid>
       </Grid>
     </div>
